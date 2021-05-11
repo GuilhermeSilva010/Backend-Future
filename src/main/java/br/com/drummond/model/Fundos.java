@@ -28,8 +28,20 @@ public class Fundos implements Serializable {
 	@Column(nullable = false, columnDefinition = "VARCHAR(30)")
 	private String name;
 
-	@Column(nullable = false, columnDefinition = "VARCHAR(30)")
-	private String valor;
+	@Column(nullable = false, columnDefinition = "VARCHAR(255)")
+	private double valor;
+
+	@Column(nullable = false, columnDefinition = "VARCHAR(50)")
+	private double apliMin;
+
+	@Column(nullable = false, columnDefinition = "VARCHAR(50)")
+	private double priceUni;
+
+	@Column(nullable = false, columnDefinition = "VARCHAR(50)")
+	private double rentabi;
+
+	@Column(nullable = false, columnDefinition = "VARCHAR(50)")
+	private double taxa;
 
 	public Long getId() {
 		return id;
@@ -47,12 +59,44 @@ public class Fundos implements Serializable {
 		this.name = name;
 	}
 
-	public String getValor() {
+	public double getValor() {
 		return valor;
 	}
 
-	public void setValor(String valor) {
+	public void setValor(double valor) {
 		this.valor = valor;
+	}
+
+	public double getApliMin() {
+		return apliMin;
+	}
+
+	public void setApliMin(double apliMin) {
+		this.apliMin = apliMin;
+	}
+
+	public double getPriceUni() {
+		return priceUni;
+	}
+
+	public void setPriceUni(double priceUni) {
+		this.priceUni = priceUni;
+	}
+
+	public double getRentabi() {
+		return rentabi;
+	}
+
+	public void setRentabi(double rentabi) {
+		this.rentabi = rentabi;
+	}
+
+	public double getTaxa() {
+		return taxa;
+	}
+
+	public void setTaxa(double taxa) {
+		this.taxa = taxa;
 	}
 
 }

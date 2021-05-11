@@ -6,22 +6,13 @@ public class FundosAddRequest implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private String name;
-	private String valor;
+	private double valor;
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getValor() {
+	public double getValor() {
 		return valor;
 	}
 
-	public void setValor(String valor) {
+	public void setValor(double valor) {
 		this.valor = valor;
 	}
 

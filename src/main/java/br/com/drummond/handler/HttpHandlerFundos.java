@@ -4,7 +4,6 @@ import org.springframework.stereotype.Component;
 
 import br.com.drummond.response.APIReturn;
 
-
 @Component
 public class HttpHandlerFundos {
 
@@ -26,4 +25,17 @@ public class HttpHandlerFundos {
 			response.setData(null);
 		}
 	}
+
+	public void handleRowsMessages(APIReturn response, int code, Object model) {
+		if (code == 200) {
+			response.setMsg("OK");
+			response.setCode(200);
+			response.setData(model);
+		} else if (code == 400) {
+			response.setCode(400);
+			response.setMsg("BAD_REQUEST");
+			response.setData(null);
+		}
+	}
+
 }

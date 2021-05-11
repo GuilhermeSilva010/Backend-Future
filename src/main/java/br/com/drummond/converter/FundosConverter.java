@@ -13,7 +13,6 @@ public class FundosConverter {
 
 		try {
 			Fundos fundo = new Fundos();
-			fundo.setName(fundosRequest.getName());
 			fundo.setValor(fundosRequest.getValor());
 			return fundo;
 		} catch (Exception e) {
@@ -27,7 +26,6 @@ public class FundosConverter {
 		try {
 			FundosResponse fundosResponse = new FundosResponse();
 			fundos.setName(fundosResponse.getName());
-			fundos.setValor(fundosResponse.getValor());
 			return fundosResponse;
 		} catch (Exception e) {
 			e.printStackTrace();

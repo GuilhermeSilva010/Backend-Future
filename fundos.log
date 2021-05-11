@@ -1047,3 +1047,50 @@ Consider defining a bean of type 'br.com.drummond.response.APIReturn' in your co
 2021-04-18 16:59:08.645  INFO 14318 --- [RMI TCP Connection(23)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2021-04-18 16:59:08.649  INFO 14318 --- [RMI TCP Connection(23)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-04-18 16:59:08.651  INFO 14318 --- [RMI TCP Connection(23)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-05-10 21:04:02.453  INFO 5136 --- [main] br.com.drummond.FundosApplication        : Starting FundosApplication using Java 15.0.2 on DESKTOP-Q3607G2 with PID 5136 (C:\Users\mathe\fundos\Backend-Future\target\classes started by mathe in C:\Users\mathe\fundos\Backend-Future)
+2021-05-10 21:04:02.460  INFO 5136 --- [main] br.com.drummond.FundosApplication        : The following profiles are active: dev
+2021-05-10 21:04:03.466  INFO 5136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-10 21:04:03.582  INFO 5136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 5 JPA repository interfaces.
+2021-05-10 21:04:04.378  INFO 5136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2021-05-10 21:04:04.404  INFO 5136 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-10 21:04:04.404  INFO 5136 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-10 21:04:04.606  INFO 5136 --- [main] o.a.c.c.C.[.[localhost].[/fundos]        : Initializing Spring embedded WebApplicationContext
+2021-05-10 21:04:04.607  INFO 5136 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2071 ms
+2021-05-10 21:04:04.952  INFO 5136 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-10 21:04:05.080  INFO 5136 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-10 21:04:05.530  INFO 5136 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-10 21:04:05.741  INFO 5136 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-10 21:04:06.001  INFO 5136 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-10 21:04:06.050  INFO 5136 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-05-10 21:04:15.647  INFO 5136 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-10 21:04:15.659  INFO 5136 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-10 21:04:16.479  WARN 5136 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-10 21:04:16.631  INFO 5136 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-10 21:04:16.947  INFO 5136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path '/fundos'
+2021-05-10 21:04:16.958  INFO 5136 --- [main] br.com.drummond.FundosApplication        : Started FundosApplication in 15.214 seconds (JVM running for 17.384)
+2021-05-10 21:37:41.066  INFO 3512 --- [main] br.com.drummond.FundosApplication        : Starting FundosApplication using Java 15.0.2 on DESKTOP-Q3607G2 with PID 3512 (C:\Users\mathe\fundos\Backend-Future\target\classes started by mathe in C:\Users\mathe\fundos\Backend-Future)
+2021-05-10 21:37:41.071  INFO 3512 --- [main] br.com.drummond.FundosApplication        : The following profiles are active: dev
+2021-05-10 21:37:41.957  INFO 3512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-10 21:37:42.062  INFO 3512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 5 JPA repository interfaces.
+2021-05-10 21:37:42.812  INFO 3512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2021-05-10 21:37:42.828  INFO 3512 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-10 21:37:42.828  INFO 3512 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-10 21:37:42.978  INFO 3512 --- [main] o.a.c.c.C.[.[localhost].[/fundos]        : Initializing Spring embedded WebApplicationContext
+2021-05-10 21:37:42.978  INFO 3512 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1840 ms
+2021-05-10 21:37:43.252  INFO 3512 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-10 21:37:43.332  INFO 3512 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-10 21:37:43.549  INFO 3512 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-10 21:37:43.717  INFO 3512 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-10 21:37:43.982  INFO 3512 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-10 21:37:44.030  INFO 3512 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-05-10 21:37:45.184  INFO 3512 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-10 21:37:45.199  INFO 3512 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-10 21:37:46.022  WARN 3512 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-10 21:37:46.162  INFO 3512 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-10 21:37:46.494  INFO 3512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path '/fundos'
+2021-05-10 21:37:46.506  INFO 3512 --- [main] br.com.drummond.FundosApplication        : Started FundosApplication in 6.069 seconds (JVM running for 7.425)
+2021-05-10 21:38:08.264  INFO 3512 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-05-10 21:38:08.293  INFO 3512 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-10 21:38:08.297  INFO 3512 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-10 21:38:08.301  INFO 3512 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-05-10 21:38:08.311  INFO 3512 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
