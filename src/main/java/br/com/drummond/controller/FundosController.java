@@ -74,7 +74,7 @@ class FundosController {
 			List<Fundos> fundos = fundosService.getListPages(listPageRequest.getData(), listPageRequest.getPage(),
 					listPageRequest.getRows());
 
-			System.out.println(" :: Encerrando o método /api/job/paginated/list - 200 - OK :: ");
+			System.out.println(" :: Encerrando o método /api/fundos/list - 200 - OK :: ");
 			return new ResponseEntity<APIReturn>(apiReturn, HttpStatus.OK);
 		} catch (Exception ex) {
 			ex.printStackTrace();
