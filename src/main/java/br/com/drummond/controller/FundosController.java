@@ -73,6 +73,14 @@ class FundosController {
 
 			List<Fundos> fundos = fundosService.getListPages(listPageRequest.getData(), listPageRequest.getPage(),
 					listPageRequest.getRows());
+			if (!fundos.isEmpty()) {
+				List<FundosResponse> fundoResponse = fundosConverter.FundosSavedToListItem(fundos);
+				if (!fundoResponse.isEmpty())
+					httpHandlerFundos.handleListMessages(apiReturn, 200, fundoResponse);
+				else
+					httpHandlerFundos.handleListMessages(apiReturn, 404, null);
+			} else
+				httpHandlerFundos.handleListMessages(apiReturn, 404, null);
 
 			System.out.println(" :: Encerrando o método /api/fundos/list - 200 - OK :: ");
 			return new ResponseEntity<APIReturn>(apiReturn, HttpStatus.OK);

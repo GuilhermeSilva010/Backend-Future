@@ -21,7 +21,6 @@ public class FundosBeanService implements FundosService {
 		return repository.save(obj);
 	}
 
-	
 	public List<Fundos> getListPages(String data, Integer page, Integer rows) {
 		return repository.getListPages(data, PageRequest.of(page, rows));
 
