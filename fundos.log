@@ -622,3 +622,26 @@ Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo can
 2021-05-12 20:08:39.578  INFO 9532 --- [RMI TCP Connection(20)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2021-05-12 20:08:39.581  INFO 9532 --- [RMI TCP Connection(20)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-05-12 20:08:39.591  INFO 9532 --- [RMI TCP Connection(20)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-05-12 20:33:18.440  INFO 9192 --- [main] br.com.drummond.FundosApplication        : Starting FundosApplication using Java 15.0.2 on DESKTOP-Q3607G2 with PID 9192 (C:\Users\mathe\fundos\Backend-Future\target\classes started by mathe in C:\Users\mathe\fundos\Backend-Future)
+2021-05-12 20:33:18.444  INFO 9192 --- [main] br.com.drummond.FundosApplication        : The following profiles are active: dev
+2021-05-12 20:33:19.139  INFO 9192 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-12 20:33:19.198  INFO 9192 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interfaces.
+2021-05-12 20:33:19.744  INFO 9192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2021-05-12 20:33:19.756  INFO 9192 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-12 20:33:19.756  INFO 9192 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-12 20:33:19.879  INFO 9192 --- [main] o.a.c.c.C.[.[localhost].[/fundos]        : Initializing Spring embedded WebApplicationContext
+2021-05-12 20:33:19.879  INFO 9192 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1383 ms
+2021-05-12 20:33:20.099  INFO 9192 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-12 20:33:20.157  INFO 9192 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-05-12 20:33:20.308  INFO 9192 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-12 20:33:20.425  INFO 9192 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-12 20:33:20.625  INFO 9192 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-12 20:33:20.671  INFO 9192 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-05-12 20:33:21.273  INFO 9192 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-12 20:33:21.284  INFO 9192 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-12 20:33:21.722  WARN 9192 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-12 20:33:21.826  INFO 9192 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-12 20:33:22.072  INFO 9192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path '/fundos'
+2021-05-12 20:33:22.081  INFO 9192 --- [main] br.com.drummond.FundosApplication        : Started FundosApplication in 4.112 seconds (JVM running for 5.257)
+2021-05-12 20:33:28.256  INFO 9192 --- [http-nio-8181-exec-1] o.a.c.c.C.[.[localhost].[/fundos]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-12 20:33:28.257  INFO 9192 --- [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
