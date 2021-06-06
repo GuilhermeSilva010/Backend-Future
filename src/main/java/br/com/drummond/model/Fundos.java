@@ -19,6 +19,14 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 @JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, property = "@Fundos")
 public class Fundos implements Serializable {
 
+	public double getCotas() {
+		return cotas;
+	}
+
+	public void setCotas(double cotas) {
+		this.cotas = cotas;
+	}
+
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -42,7 +50,12 @@ public class Fundos implements Serializable {
 
 	@Column(nullable = false, columnDefinition = "VARCHAR(50)")
 	private double taxa;
-
+	
+	@Column(nullable = false, columnDefinition = "VARCHAR(50)")
+	private double cotas;
+	
+//	LocalDate data;
+		
 	public Long getId() {
 		return id;
 	}

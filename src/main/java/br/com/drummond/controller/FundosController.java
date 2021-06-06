@@ -12,15 +12,22 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import br.com.drummond.converter.CalculoFundoConverter;
 import br.com.drummond.converter.FundosConverter;
 import br.com.drummond.handler.HttpHandlerFundos;
 import br.com.drummond.model.Fundos;
+import br.com.drummond.request.CalculoFundoAddRequest;
 import br.com.drummond.request.FundosAddRequest;
 import br.com.drummond.request.ListPageRequest;
 import br.com.drummond.response.APIReturn;
+import br.com.drummond.response.CalculoFundoReponse;
 import br.com.drummond.response.FundosResponse;
+import br.com.drummond.service.CalculoFundoService;
 import br.com.drummond.service.FundosService;
 
+//@RestController
+//@CrossOrigin(origins = "http://localhost:4200")
+//@RequestMapping("")
 @Controller
 class FundosController {
 
@@ -28,7 +35,13 @@ class FundosController {
 	private FundosService fundosService;
 
 	@Autowired
+	private CalculoFundoService calculoFundoService;
+
+	@Autowired
 	private FundosConverter fundosConverter;
+
+	@Autowired
+	private CalculoFundoConverter calculoConverter;
 
 	@Autowired
 	private HttpHandlerFundos httpHandlerFundos;
@@ -38,14 +51,26 @@ class FundosController {
 	public ResponseEntity<APIReturn> add(@RequestBody FundosAddRequest fundoRequest) throws IOException {
 
 		APIReturn apiReturn = new APIReturn();
+		CalculoFundoAddRequest calculoRequest = new CalculoFundoAddRequest();
 
 		try {
-			FundosResponse fundosResponse = fundosConverter
-					.FundosSavedToItem(fundosService.save(fundosConverter.FundosRequestToSave(fundoRequest)));
 
-			if (fundosResponse != null)
-				httpHandlerFundos.handleAddMessages(apiReturn, 200, fundosResponse);
-			else
+			Fundos fundos = fundosService.getById(fundoRequest.getId());
+
+			if (fundos != null) {
+				fundos.setValor(fundoRequest.getValor());
+				double minimo = fundos.getApliMin();
+				double total = fundoRequest.getValor() / minimo;
+				fundos.setCotas(total);
+				calculoRequest.setName(fundoRequest.getName());
+				calculoRequest.setValor(total);
+				CalculoFundoReponse response = calculoConverter
+						.calculoFundoReponse(calculoFundoService.save(calculoConverter.calculoSave(calculoRequest)));
+
+				fundosService.save(fundos);
+
+				httpHandlerFundos.handleAddMessages(apiReturn, 200, fundos);
+			} else
 				httpHandlerFundos.handleAddMessages(apiReturn, 404, null);
 
 			System.out.println(" :: Encerrando o método /api/fundos/add - 200 - OK :: ");

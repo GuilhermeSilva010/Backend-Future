@@ -6,22 +6,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
-import br.com.drummond.model.Fundos;
-import br.com.drummond.repository.FundosRepository;
+import br.com.drummond.model.CalculoFundo;
+import br.com.drummond.repository.CalculoFundoRepository;
 
 @Service
-public class FundosBeanService implements FundosService {
+public class CalculoFundoBeanService implements CalculoFundoService {
 
 	@Autowired
-	FundosRepository repository;
-	
+	CalculoFundoRepository repository;
 
 	@Override
-	public Fundos save(Fundos obj) {
+	public CalculoFundo save(CalculoFundo obj) {
+
 		return repository.save(obj);
 	}
 
-	public List<Fundos> getListPages(String data, Integer page, Integer rows) {
+	public List<CalculoFundo> getListPages(String data, Integer page, Integer rows) {
 		return repository.getListPages(data, PageRequest.of(page, rows));
 
 	}
@@ -29,12 +29,10 @@ public class FundosBeanService implements FundosService {
 	public Integer getCount(String data) {
 		return repository.getCount(data);
 	}
+
+	@Override
+	public CalculoFundo getById(Long id) {
+		return repository.getById(id);
+	}
 	
-
-		@Override
-		public Fundos getById(Long id) {
-		
-			return repository.getById(id);
-		}
-
 }

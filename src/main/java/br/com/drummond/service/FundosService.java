@@ -11,4 +11,6 @@ public interface FundosService {
 	List<Fundos> getListPages(String data,Integer page, Integer rows);
 	
 	Integer getCount(String data);
+	
+	Fundos getById(Long id);
 }

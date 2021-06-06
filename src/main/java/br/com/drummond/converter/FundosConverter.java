@@ -1,7 +1,6 @@
 package br.com.drummond.converter;
 
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +18,7 @@ public class FundosConverter {
 		try {
 			Fundos fundo = new Fundos();
 			fundo.setValor(fundosRequest.getValor());
+			fundo.setId(fundosRequest.getId());
 			return fundo;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -30,6 +30,7 @@ public class FundosConverter {
 
 		try {
 			FundosResponse fundosResponse = new FundosResponse();
+			fundos.setId(fundosResponse.getId());
 			fundos.setName(fundosResponse.getName());
 			fundos.setValor(fundosResponse.getValor());
 			fundos.setApliMin(fundosResponse.getApliMin());
@@ -49,6 +50,7 @@ public class FundosConverter {
 		try {
 			for (Fundos fundo : fundos) {
 				FundosResponse fundosResponse = new FundosResponse();
+				fundosResponse.setId(fundo.getId());
 				fundosResponse.setName(fundo.getName());
 				fundosResponse.setValor(fundo.getValor());
 				fundosResponse.setApliMin(fundo.getApliMin());
